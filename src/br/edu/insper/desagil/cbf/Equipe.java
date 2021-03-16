@@ -1,7 +1,6 @@
 package br.edu.insper.desagil.cbf;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Equipe {
@@ -21,8 +20,12 @@ public class Equipe {
 		this.nome = nome;
 	}
 
-	public List<Jogador> getJogadores() {
-		return Collections.unmodifiableList(this.jogadores);
+	public int getNumJogadores() {
+		return this.jogadores.size();
+	}
+
+	public Jogador getJogador(int i) {
+		return this.jogadores.get(i);
 	}
 
 	public void adicionaJogador(Jogador jogador) {
